@@ -214,6 +214,10 @@ header ul li a{
     width: 100%;
 }
 
+.container .box-posts .posts .post .title-content-media .flip{
+    flex-direction: row-reverse;
+}
+
 
 .container .box-posts .posts .post .title-content-media .content-media .content{
     display: flex;
@@ -291,8 +295,8 @@ header ul li a{
     overflow: hidden;
 
     position: relative;
-
 }
+
 .container .box-posts .posts .post .title-content-media .content-media .media-post img{
     width: 100%;
     min-width: 100%;
@@ -419,6 +423,11 @@ header ul li a{
     .container .box-posts .posts .post .title-content-media .content-media{
         flex-direction: column;
     }
+
+    .container .box-posts .posts .post .title-content-media .flip{
+        flex-direction:column;
+    }
+
     .container .box-posts .posts .post .title-content-media .content-media .content{
         width: 100%;
         height: 40vh;

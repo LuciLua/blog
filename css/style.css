@@ -227,7 +227,7 @@ header ul li a{
     align-items: center;
     flex-direction: column;
 
-    padding: 30px 30px 30px 30px;
+    padding: 30px 50px 30px 50px;
     text-align: justify;
 
     width: 50%;
@@ -445,6 +445,19 @@ header ul li a{
         min-height: 93vh;
         max-height: 93vh;
     }
+
+    .container .box-posts .posts .post::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+
+        background-color: #dadada;
+
+        bottom: 0;
+    }
+
+
     .container .box-posts .posts .post .title-content-media .content-media{
         flex-direction: column;
     }
@@ -456,6 +469,8 @@ header ul li a{
     .container .box-posts .posts .post .title-content-media .content-media .content{
         width: 100%;
         height: 40vh;
+
+        padding:20px;
     }
     .container .box-posts .posts .post .title-content-media .content-media .media-post{
         width: 100%;

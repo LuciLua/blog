@@ -105,7 +105,7 @@ header ul li a{
 
 header ul li a:hover{
     background-color: #f2f2f2;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0 ;
 }
 
 
@@ -487,7 +487,10 @@ header ul li a:hover{
         margin: 0px;
         padding: 0;
 
-        color: #fff;
+        color: rgb(0, 0, 0);
+        font-weight: 900;
+
+        filter: invert(1);
 
         position: relative;
     }
@@ -497,7 +500,7 @@ header ul li a:hover{
         background-color: transparent;
         border-radius: 0px;
 
-        border-bottom: #fff 2px solid;
+        border-bottom: rgb(0, 0, 0) 2px solid;
     }
 
     .container .box-posts{

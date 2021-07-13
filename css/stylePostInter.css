@@ -1,0 +1,166 @@
+.post-intern{
+    width: 100%;
+    max-width: 900px;
+    height: fit-content;
+
+    line-height: 2.2;
+    font-family: ralewaySemiBold;
+
+    font-size: 14px;
+
+    color: #595959;
+
+    text-align: justify;
+       
+    margin-bottom: 20px;
+
+    text-indent: 4em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.title-post-subtitle-post-intern{
+    color: rgb(34, 34, 34);
+
+    align-self: flex-start;
+    text-indent: 0;
+
+    margin-bottom: 50px;
+
+    line-height: 2;
+}
+
+.post-intern .title-post-subtitle-post-intern h1{
+    font-family: ralewayExtraBold;
+
+    color: rgb(33, 33, 33);
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.post-intern .title-post-subtitle-post-intern h2{
+    font-family: ralewaySemiBold;
+
+    color: #b6b6b6;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.post-intern img{
+    width: 70%;
+    height: 100%;
+    max-width: 70%;
+
+    object-fit: cover;
+
+    margin: 30px 0 30px 0;
+}
+
+
+.post-intern .end-post{
+    height: 15vh;
+    min-height: 15vh;
+    max-height: 15vh;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.post-intern .end-post .info-post{
+    margin-top: 10px;
+    position: relative;
+
+    width: 100%;
+    height:fit-content;
+
+    display: flex;
+
+    background-color: #f7f7f7;
+
+    border-radius: 2px;
+}
+
+.post-intern .end-post .info-post p{
+    color: rgb(31, 31, 31);
+    margin: 20px;
+
+    font-family: ralewaySemiBold;
+    font-size: 14px;
+}
+
+.posts .list-posts{
+    width: 70%;
+    height: fit-content;
+
+}
+
+.posts .list-posts ul{
+
+    list-style: none;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.posts .list-posts ul li{
+
+    width: 300px;
+    min-height: 40px;
+    height: 40px;
+
+    background-color: #f3f3f3;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 6px;
+
+    margin: 20px;
+
+    padding-left: 10px;
+}
+
+.posts .list-posts ul li:hover::before{
+    transform: rotate(90deg);
+    transition: 0.5s;
+}
+
+.posts .list-posts ul li::before{
+
+    content: '';
+    width: 15px;
+    height: 15px;
+
+    display: flex;
+    position: absolute;
+
+    background-color: #595959;
+}
+
+.posts .list-posts ul li a{
+
+    width: 100%;
+    height: 40px;
+
+    color: rgb(36, 36, 36);
+    text-decoration: none;
+
+    font-family: ralewaySemiBold;
+
+    display: flex;
+    align-items: center;
+
+
+    padding-left: 30px;
+}

@@ -145,11 +145,11 @@ header ul li a:hover{
     position: absolute;
 
     width: 100%;
-    filter: brightness(0.8);
+    filter: brightness(0.4) grayscale(1) contrast(1.1);
 }
 
 .container .init h1{
-    color: rgb(31, 31, 31);
+    color: rgb(255, 255, 255);
     font-family: ralewayExtraBold;
     font-size: 60px;
 
@@ -157,6 +157,8 @@ header ul li a:hover{
     z-index: 10;
 
     position: relative;
+
+    text-shadow: #000 0 0 20px;
 }
 
 .container .init h2{
@@ -167,6 +169,8 @@ header ul li a:hover{
     padding: 5px 20px 5px 20px;
     
     font-family: ralewaySemiBold;
+
+    backdrop-filter: blur(3px);
     
     font-weight: 900;
     margin-top: 20px;

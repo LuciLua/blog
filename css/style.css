@@ -223,8 +223,6 @@ header ul li a:hover{
     
     height: 60vh;
 
-    border: 1px solid rgb(49, 0, 163);
-
     display: flex;
     flex-direction: column; /*title-subtitle-content-media + footerPost*/
 
@@ -238,13 +236,11 @@ header ul li a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    background-color: #c4af113f;
     
     height: 80%;
     width: 100%;
 
-    padding: 10px;
+    padding: 10px 0 10px 0; /*only T and B 10px padding*/
 
     overflow: hidden;
 
@@ -264,8 +260,7 @@ header ul li a:hover{
     margin-bottom: 20px;
 
     position: relative;
-    background-color: rgba(255, 255, 255, 0.57);
-
+    
     padding: 10px;
 }
 
@@ -296,10 +291,6 @@ header ul li a:hover{
     height: clamp(70%, 75%, 80%);
     width: 100%;
 
-    padding: 0;
-
-    border: 1px dotted red;
-
     overflow: hidden;
 }
 
@@ -323,8 +314,6 @@ header ul li a:hover{
 
     overflow: hidden;
     position: relative;
-
-    background-color: rgba(16, 82, 13, 0.26);
 }
 
 .container .box-posts .posts .post .title-content-media .content-media .content p{
@@ -355,8 +344,6 @@ header ul li a:hover{
 
     -webkit-line-clamp: 5; /* number of lines to show */
     -webkit-box-orient: vertical;
-
-    background-color: rgba(255, 14, 147, 0.219);
 }
 
 .container .box-posts .posts .post .title-content-media .content-media .content a{

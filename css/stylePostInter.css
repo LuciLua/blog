@@ -2,24 +2,28 @@
     width: 100%;
     max-width: 900px;
     height: fit-content;
+       
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.post-intern p{
+    padding: 0px 30px 0px 30px;
+
+    color: #595959;
+
+    text-align: justify;
 
     line-height: 2.2;
     font-family: ralewaySemiBold;
 
     font-size: 14px;
 
-    color: #595959;
-
-    text-align: justify;
-       
-    margin-bottom: 20px;
-
     text-indent: 4em;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
 
 

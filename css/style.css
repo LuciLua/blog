@@ -241,10 +241,7 @@ header ul li a:hover{
 
     background-color: #c4af113f;
     
-    min-height: 80%;
     height: 80%;
-    max-height: 80%;
-
     width: 100%;
 
     padding: 10px;
@@ -292,14 +289,12 @@ header ul li a:hover{
 
 .container .box-posts .posts .post .title-content-media .content-media{
     display: flex;
+    flex-direction: row;
     
     position: relative;
 
     height: clamp(70%, 75%, 80%);
-
-    min-width: 100%;
     width: 100%;
-    max-width: 100%;
 
     padding: 0;
 
@@ -322,7 +317,6 @@ header ul li a:hover{
     padding: 15px 30px 15px 30px; /*15px T and B and 30px L and R*/
 
     width: 50%; /*com o media 50% = 100%*/
-
     height: 100%; /*dos 75%*/
 
     display: flex;
@@ -389,10 +383,10 @@ header ul li a:hover{
 
 .container .box-posts .posts .post .title-content-media .content-media .media-post{
     width: 50%; /*50% media + 50% content(p)*/
+    height: 100%;
 
     position: relative;
 
-    height: 100%;
 }
 
 .container .box-posts .posts .post .title-content-media .content-media .media-post img{
@@ -527,9 +521,7 @@ header ul li a:hover{
     }
 
     .container .box-posts .posts .post{
-        height: 93vh;
-        min-height: 700px;
-        max-height: 93vh;
+        height: 90vh;
     }
 
     .container .box-posts .posts .post::after{ /*line*/
@@ -537,6 +529,8 @@ header ul li a:hover{
         position: absolute;
         width: 100%;
         height: 1px;
+
+        margin: 10px;
 
         background-color: #dadada;
 
@@ -553,7 +547,7 @@ header ul li a:hover{
 
     .container .box-posts .posts .post .title-content-media .content-media .content{
         width: 100%;
-        height: 40vh;
+        height: 55%;
 
         position: relative;
 
@@ -567,33 +561,12 @@ header ul li a:hover{
 
     .container .box-posts .posts .post .title-content-media .content-media .media-post{
         width: 100%;
+        height: 45%; /*completando com o 55% de content*/
     }
 
     
     .container .box-posts .posts .post .title-content-media .content-media .content p{
-        font-family: 'Lexend' sans-serif;
-
-        font-size: 14px;
-
-        color: #262626;
-
-        max-width: 100%;
-        
-        margin-bottom: 20px;
-
-        white-space: normal;
-        text-indent: 4em;
-
-        overflow: hidden;
-
-        text-overflow: ellipsis;
-
-        display: -webkit-box;
-
-        line-height: 2;     /* fallback */
-        max-height: 23vh;      /* fallback */
-
+        max-height: 20vh;      /* fallback */
         -webkit-line-clamp: 5; /* number of lines to show */
-        -webkit-box-orient: vertical;
     }
   }

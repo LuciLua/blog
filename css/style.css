@@ -136,6 +136,8 @@ header ul li a:hover{
     padding: 30px;
 
     position: relative;
+
+    overflow: hidden;
 }
 
 .container .init img{

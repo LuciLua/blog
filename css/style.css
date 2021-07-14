@@ -129,12 +129,36 @@ header ul li a:hover{
 
     flex-direction: column;
 
-    background-color: #fff;
-    border: 2px dotted #fff;
+    background-color: transparent;
 
     text-align: center;
 
     padding: 30px;
+
+    position: relative;
+}
+
+.container .init svg {
+    display: none;
+}
+
+header svg {
+
+    width: 100%;
+    min-width: 100%;
+
+    height: 20vh;
+
+    z-index: 10;
+
+    position: absolute;
+
+    transform: rotate(180deg);
+
+    top: 0;
+
+    filter: brightness(1) grayscale(1) opacity(0.05);
+
 }
 
 .container .init h1{
@@ -143,6 +167,7 @@ header ul li a:hover{
     font-size: 60px;
 
     line-height: 1.2;
+    z-index: 10;
 }
 
 .container .init h2{
@@ -183,6 +208,34 @@ header ul li a:hover{
     padding: 40px 20px 40px 20px;
     
     position: relative; 
+}
+
+.container .box-posts .posts svg:first-of-type{
+
+    filter: brightness(10) grayscale(1) opacity(1) contrast(1.11);
+
+
+    width: calc(100% + 50%);
+    position: absolute; 
+
+    transform: rotate(0deg);
+
+    height: calc(25vw);
+
+
+    top: 0;
+}
+
+.container .box-posts .posts svg{
+
+    filter: brightness(10) grayscale(1) opacity(1) contrast(1.11);
+
+    width: calc(100% + 50%);
+    position: absolute; 
+
+    transform: rotate(180deg);
+
+    top: calc(0px + 20vw);
 }
 
 .container .box-posts .posts .post{
@@ -503,6 +556,26 @@ header ul li a:hover{
         border-bottom: rgb(0, 0, 0) 2px solid;
     }
 
+    .header-flex svg{
+        display: none;
+    }
+
+    .container .init svg{
+        min-width: 100%;
+        min-height: 400px;
+        width: 100px;
+
+        position: absolute;
+        display: block;
+    
+        transform: rotate(180deg);
+        top: -10vh; 
+
+        z-index: 1000;
+    
+        filter: brightness(1) grayscale(1) opacity(0.05);
+    }
+
     .container .box-posts{
         padding: 5px;
     }
@@ -523,7 +596,6 @@ header ul li a:hover{
 
         bottom: 0;
     }
-
 
     .container .box-posts .posts .post .title-content-media .content-media{
         flex-direction: column;
@@ -550,31 +622,31 @@ header ul li a:hover{
     }
 
     
-.container .box-posts .posts .post .title-content-media .content-media .content p{
-    line-height: 2.2;
-    font-family: 'Lexend' sans-serif;
+    .container .box-posts .posts .post .title-content-media .content-media .content p{
+        line-height: 2.2;
+        font-family: 'Lexend' sans-serif;
 
-    font-size: 14px;
+        font-size: 14px;
 
-    color: #262626;
+        color: #262626;
 
-    max-width: 100%;
-    
-    margin-bottom: 20px;
+        max-width: 100%;
+        
+        margin-bottom: 20px;
 
-    white-space: normal;
-    text-indent: 4em;
+        white-space: normal;
+        text-indent: 4em;
 
-    overflow: hidden;
+        overflow: hidden;
 
-    text-overflow: ellipsis;
+        text-overflow: ellipsis;
 
-    display: -webkit-box;
+        display: -webkit-box;
 
-    line-height: 2;     /* fallback */
-    max-height: 17vh;      /* fallback */
+        line-height: 2;     /* fallback */
+        max-height: 17vh;      /* fallback */
 
-    -webkit-line-clamp: 5; /* number of lines to show */
-    -webkit-box-orient: vertical;
-}
+        -webkit-line-clamp: 5; /* number of lines to show */
+        -webkit-box-orient: vertical;
+    }
   }

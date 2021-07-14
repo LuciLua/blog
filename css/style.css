@@ -510,12 +510,17 @@ header ul li a:hover{
         height: 90vh;
     }
 
+    .container .box-posts .posts .post .title-content-media{
+        height: 100%;
+        width: 100%;
+    }
+
     .container .box-posts .posts .post .title-content-media .title-post-subtitle-post{
-        height: 15%;
+        height: 20%;
     }
 
     .container .box-posts .posts .post .title-content-media .content-media{
-        height: 85%;
+        height: calc(100% - 40%);
         width: 100%;
         flex-direction: column;
     }
@@ -549,7 +554,7 @@ header ul li a:hover{
     
     .container .box-posts .posts .post .title-content-media .content-media .content p{
         max-height: 20vh;      /* fallback */
-        -webkit-line-clamp: 4; /* number of lines to show */
+        -webkit-line-clamp: 3; /* number of lines to show */
     }
     .container .box-posts .posts .post .end-post{
         height: 10%; /*20% end + 75% title and content-media*/

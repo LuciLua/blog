@@ -12,7 +12,7 @@
     src: url('/font/Raleway-ExtraBold.ttf');
 }
 
-/* @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500&family=Ubuntu&family=Yatra+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500&family=Ubuntu&family=Yatra+One&display=swap');
 
 
 ::-webkit-scrollbar{
@@ -32,10 +32,10 @@
     box-sizing: border-box;
 }
 
-html {
+html{
     min-height: 100%;
     position: relative;
-  }
+}
 
 body{
     min-height: 100vh;

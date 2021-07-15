@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylePostInter.css" type="text/css">
 </head>
 <body>
     <a class="menu" href="#" onclick="menu()">Menu</a>
@@ -28,9 +29,20 @@
         </div>
         <div class="box-posts">
             <div class="posts">
-                <p>
-                    Content escreva
-                </p>
+                <div class="escreva">
+                    <form action="">
+                        <label for="name">Nome</label>
+                        <input class="btn" type="text" id="name" name="name" placeholder="Seu nome">
+                        <label for="email">Email</label>
+                        <input class="btn" type="text" id="email" name="email" placeholder="Seu email">
+                        <label for="msg">Mensagem</label>
+                        <textarea name="msg" id="" cols="30" rows="10"></textarea>
+                        <div class="btn">
+                            <p>:)</p>
+                            <button type="submit"> Enviar </button>
+                        </div>
+                    </form>
+                </div>
             </div>  
         </div>
     </div>

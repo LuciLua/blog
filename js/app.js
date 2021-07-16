@@ -62,11 +62,8 @@ function validation(){
 
 window.addEventListener('scroll', function(){
     var h1Init = document.getElementById('bloblgo')
-    
     let value = this.window.scrollY;
-    
     h1Init.style.marginBottom = value * 0.25 + 'px';
-    
 })
 
 // onlinput
@@ -86,46 +83,36 @@ function color(){
 //search
 
 function search(){
-
-    
-    
-    const posts = []
-
-    var result = document.getElementById('list-search')
+   
+    var result = document.getElementById('list-search') // select: area do resultado
     result.innerHTML = '' //reseta antes de nova pesquisa
-
-    let post = document.querySelectorAll('.post-item')
     
-    var nome = []
-    
-    const postNome = {nome: 'ola'}
-    
-    const list = []
+    const posts = [] // lista com todos os 'post'
+    let post = document.querySelectorAll('.post-item') // vai estar dentro de posts
 
-    for (let i=0; i < post.length; i++){
-        posts.push(post[i])
+    for (let i = 0; i < post.length; i++){
+        posts.push(post[i]) // puxa para lista posts todos os post
+    } 
 
-        list.push(postNome.nome = post[i])
+    var inputSearch = document.getElementById('input-search').value; // select: input de pesquisa
 
-        for( o = 0; o < list.length; o++){
-            nome.push(list[o].innerHTML)
-
-        }
-        
-    }
-    
-    var inputSearch = document.getElementById('input-search').value;
-
-    if(inputSearch == 'all'){
-
-        for ( let i = 0; i < nome.length; i++){
-            result.innerHTML += '<div class="item">' + nome[i] + '</div>'
+    if(inputSearch == 'all'){ // search: command: all: mostra todos os posts
+        for ( let i = 0; i < posts.length; i++){ // passa por cada post e imprime cada post
+            result.innerHTML += ("<a class='item' href='" + posts[i] + "'>"+ posts[i].textContent +"</a>")
         }
     }
-    
-    
 
+    for (let i = 0; i < posts.length; i++){ // passa por cada post
+        var especific = posts[i].textContent // especific: conteudo de cada post que ele passa
 
-    // result.innerHTML = nome
+        if(especific.indexOf(inputSearch) != -1){ // busca especifica
+            for (let i = 0; i < posts.length; i++){
+
+                if (posts[i].textContent.indexOf(especific) != -1){
+                    result.innerHTML += ("<a class='item' href='" + posts[i] + "'>"+ posts[i].textContent +"</a>")
+                }
+            }
+        }
+    }
 }
 

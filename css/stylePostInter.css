@@ -466,7 +466,7 @@
 
 .box-posts .result-search h1{
     position: absolute;
-    opacity: 20%;
+    opacity: 0%;
 }
 
 .box-posts .result-search .list-search{
@@ -490,6 +490,7 @@
 
     background-color: #ebebeb;
 
+    text-decoration: none;
 }
 
 

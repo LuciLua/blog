@@ -4,8 +4,8 @@ function menu(){
     // document.body.classList.toggle('body-overflow-none')
 }
 
-document.getElementById('send').addEventListener('click', function(){
-                
+function validation(){
+              
     var notice = document.getElementById('notice')
     var noticeF = document.getElementById('notice-falha')
     var email = document.getElementById('email')
@@ -56,4 +56,31 @@ document.getElementById('send').addEventListener('click', function(){
         ) // enquanto processa 
         document.body.style.cursor='wait'
         document.getElementById('loading').style.display='block'                               
+}
+
+// scroll
+
+window.addEventListener('scroll', function(){
+    var h1Init = document.getElementById('bloblgo')
+    
+    let value = this.window.scrollY;
+    
+    h1Init.style.marginBottom = value * 0.25 + 'px';
+    
 })
+
+// onlinput
+
+function color(){
+    var colorInput = document.getElementById('colorInput')
+    var init = document.querySelector('.init')
+    init.style.background = colorInput.value
+
+    // var boxPosts = document.querySelector('.box-posts')
+
+    // var newColor = 
+
+    boxPosts.style.backgroundColor = colorInput.value
+    console.log(colorInput.value)
+}
+

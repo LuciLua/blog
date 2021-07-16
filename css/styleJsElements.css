@@ -1,0 +1,40 @@
+#colorInput{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    border-radius: 60%;
+
+    z-index: 100;
+
+    top: 10px;
+    left: 100%;
+
+    transition: 0.2s;
+    opacity: 30%;
+
+
+}
+#colorInput:hover{
+    transition: 0.2s;
+    opacity: 90%;    
+}
+
+#colorInput::after{
+    content: '';
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0);
+
+    border: 1px solid rgb(218, 218, 218);
+
+    border-radius: 60%;
+
+    top: 0;
+    right: 45px;
+
+    transition: 0.2s;
+}

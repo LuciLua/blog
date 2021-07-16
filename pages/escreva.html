@@ -7,6 +7,7 @@
     <title>Blog</title>
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <link rel="stylesheet" href="/css/stylePostInter.css" type="text/css">
+    <link rel="stylesheet" href="/css/styleJsElements.css" type="text/css">
 </head>
 <body>
     <a class="menu" href="#" onclick="menu()">Menu</a>
@@ -24,6 +25,7 @@
     </header>
     <div class="container">
         <div class="init">
+            <input type="color" name="color" id="colorInput" oninput="color()">
             <h1>bloblgo: o blog</h1>
             <h2>Escritos de uma artista cansada que ama tecnologia</h2>
         </div>
@@ -51,7 +53,7 @@
                         <textarea name="entry.1221552742" id="msg" cols="30" rows="10" required></textarea>
                         <div class="btn">
                             <p>:)</p>
-                            <button type="submit" id="send"> Enviar </button>
+                            <button type="submit" id="send" onclick="validation()"> Enviar </button>
                         </div>
                     <p id="loading">Enviando...</p>
                     </form>

@@ -72,18 +72,15 @@ window.addEventListener('scroll', function(){
 // onlinput
 
 function color(){
+    var h1Init = document.getElementById('bloblgo')
     var colorInput = document.getElementById('colorInput')
-    var init = document.querySelector('.init')
-    
-    var boxPosts = document.querySelector('.box-posts')
-    
-    const letras = ['F']
-    for (let i = 0; i <= letras.length; i++){
-        var letra = letras[((Math.random() * 10).toFixed(0))]
-        var newColor = ('#' + letra + (colorInput.value).replace('#', '')).substr(0,7)
+    var post = document.querySelectorAll('.post'), i;
+
+    for (let i=0; i < post.length; i++){
+        post[i].style.borderColor = colorInput.value
     }
-    
-    boxPosts.style.background = colorInput.value
-    init.style.backgroundColor = newColor
+
+    h1Init.style.color = colorInput.value
+
 }
 

@@ -454,6 +454,7 @@
 .box-posts .result-search{
     width: 100%;
     min-height: 20vh;
+    height: fit-content;
 
     border: 1px solid rgb(44, 78, 107);
 
@@ -462,4 +463,34 @@
     display: flex;
     justify-content: center;
 }
+
+.box-posts .result-search h1{
+    position: absolute;
+    opacity: 20%;
+}
+
+.box-posts .result-search .list-search{
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+.box-posts .result-search .list-search .item{
+    color: #595959;
+    font-family: ralewaySemiBold;
+    font-size: 14px;
+
+    margin: 5px;
+
+    width: fit-content;
+    height: 30px;
+
+    padding: 10px;
+
+    background-color: #ebebeb;
+
+}
+
+
 

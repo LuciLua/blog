@@ -81,6 +81,51 @@ function color(){
     }
 
     h1Init.style.color = colorInput.value
+}
 
+//search
+
+function search(){
+
+    
+    
+    const posts = []
+
+    var result = document.getElementById('list-search')
+    result.innerHTML = '' //reseta antes de nova pesquisa
+
+    let post = document.querySelectorAll('.post-item')
+    
+    var nome = []
+    
+    const postNome = {nome: 'ola'}
+    
+    const list = []
+
+    for (let i=0; i < post.length; i++){
+        posts.push(post[i])
+
+        list.push(postNome.nome = post[i])
+
+        for( o = 0; o < list.length; o++){
+            nome.push(list[o].innerHTML)
+
+        }
+        
+    }
+    
+    var inputSearch = document.getElementById('input-search').value;
+
+    if(inputSearch == 'all'){
+
+        for ( let i = 0; i < nome.length; i++){
+            result.innerHTML += '<div class="item">' + nome[i] + '</div>'
+        }
+    }
+    
+    
+
+
+    // result.innerHTML = nome
 }
 

@@ -21,6 +21,9 @@ document.getElementById('send').addEventListener('click', function(){
     msg.style.pointerEvents='none'
     msg.style.backgroundColor='rgb(228, 228, 228)'
     
+    document.getElementById('send').style.pointerEvents='none'
+    document.getElementById('send').style.backgroundColor='rgb(228, 228, 228)'
+    
     setTimeout(
         function(){  
             document.body.style.cursor='default'
@@ -29,7 +32,7 @@ document.getElementById('send').addEventListener('click', function(){
             if (email.value.length <= 5 || email.value.indexOf('@') == -1){
                 noticeF.style.display='block'
 
-                setTimeout(function(){
+                setTimeout(function(){ // se for invalido
                     noticeF.style.display='none'
                     email.style.pointerEvents='all'
                     email.style.backgroundColor='#fff'
@@ -37,16 +40,20 @@ document.getElementById('send').addEventListener('click', function(){
                     nome.style.backgroundColor='#fff'
                     msg.style.pointerEvents='all'
                     msg.style.backgroundColor='#fff'
+                    document.getElementById('send').style.pointerEvents='all'
+                    document.getElementById('send').style.backgroundColor='#fff'
                 }, 3000)
             }
             else if (email.value.indexOf('@') != -1){
                 notice.style.display='block'
-                setTimeout(function(){
+                setTimeout(function(){ // se for valido
                     notice.style.display='none'
+                    document.getElementById('send').style.backgroundColor= 'rgb(220, 255, 218)'
+                    document.getElementById('send').textContent = 'Enviado!'
                 }, 3000)
             } 
         }, 1000
-        )
+        ) // enquanto processa 
         document.body.style.cursor='wait'
         document.getElementById('loading').style.display='block'                               
 })

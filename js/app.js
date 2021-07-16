@@ -74,13 +74,16 @@ window.addEventListener('scroll', function(){
 function color(){
     var colorInput = document.getElementById('colorInput')
     var init = document.querySelector('.init')
-    init.style.background = colorInput.value
-
-    // var boxPosts = document.querySelector('.box-posts')
-
-    // var newColor = 
-
-    boxPosts.style.backgroundColor = colorInput.value
-    console.log(colorInput.value)
+    
+    var boxPosts = document.querySelector('.box-posts')
+    
+    const letras = ['F']
+    for (let i = 0; i <= letras.length; i++){
+        var letra = letras[((Math.random() * 10).toFixed(0))]
+        var newColor = ('#' + letra + (colorInput.value).replace('#', '')).substr(0,7)
+    }
+    
+    boxPosts.style.background = colorInput.value
+    init.style.backgroundColor = newColor
 }
 

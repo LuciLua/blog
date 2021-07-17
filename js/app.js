@@ -85,37 +85,36 @@ function color(){
 function search(){
    
     var result = document.getElementById('list-search') // select: area do resultado
-    result.innerHTML = '' //reseta antes de nova pesquisa
-    
+    result.innerHTML = '' //reseta resultado para proxima pesquisa
+
     const posts = [] // lista com todos os 'post'
     let post = document.querySelectorAll('.post-item') // vai estar dentro de posts
 
+    const nomePosts = [] //lista de nome de cada post
+    
+    var inputSearch = document.getElementById('input-search').value.toLowerCase(); // select: input de pesquisa
+    
     for (let i = 0; i < post.length; i++){
         posts.push(post[i]) // puxa para lista posts todos os post
     } 
 
-    var inputSearch = document.getElementById('input-search').value.toLowerCase(); // select: input de pesquisa
-
     for (let i = 0; i < posts.length; i++){ // passa por cada post
 
-        var especific = posts[i].textContent.toLowerCase() // especific: conteudo  textual de cada post que ele passa
+        nomePosts.push(posts[i].textContent.toLowerCase()) // insere na lista de nome o nome de cada post.
+        
+        var itemPost = posts[i].textContent.toLowerCase() // itemPost: conteudo  textual de cada post que ele passa
         
         if(inputSearch == 'all'){ // search: command: all: mostra todos os posts
             result.innerHTML += ("<a class='item' href='" + posts[i] + "'>"+ posts[i].textContent +"</a>")
         }
-
-        else if(especific.indexOf(inputSearch) != -1){ // verifica se o que foi digitado existe no conteudo textual do post
+        
+        else if(itemPost.indexOf(inputSearch) != -1){ // verifica se o que foi digitado existe no conteudo textual do post
             result.innerHTML += ("<a class='item' href='" + posts[i] + "'>"+ posts[i].textContent +"</a>")
         }
-    } 
+    }
 
-    switch(inputSearch){
-        case '':
-            result.innerHTML = ("<p class='notFound'>Not found. Sorry :(</p>")
-            break
-        case especific.indexOf(inputSearch) != -1:
-            result.innerHTML = ("<p class='notFound'>Not found. Sorry :(: NOOT </p>")
-            break
+    if (nomePosts.join('').indexOf(inputSearch) == -1 && inputSearch != 'all' || inputSearch == '') { // se estiver vazio ou se for diferente de 'all' e também não estiver contido no 'ex-array' unido pelo join() nomePosts
+        result.innerHTML = 'Sorry, not found :('
     }
 }
 

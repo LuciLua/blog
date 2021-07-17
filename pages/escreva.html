@@ -44,7 +44,7 @@
                         </h1>
                     </div>
 
-                    <form action="https://docs.google.com/forms/d/e/1FAIpQLScPLY04KWdCdqSbWXbMRvczg5SY2bdpjrcmFQpS_WxF-bI09g/formResponse" target="prox"> 
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLScPLY04KWdCdqSbWXbMRvczg5SY2bdpjrcmFQpS_WxF-bI09g/formResponse" target="prox" SameSite=None; Secure Set-Cookie: cname=cvalue> 
                         <label for="entry.2063735066">Nome</label>
                         <input class="btn" type="text" id="nome" name="entry.2063735066" placeholder="Seu nome" required>
                         <label for="entry.393161566">Email</label>
@@ -52,7 +52,10 @@
                         <label for="entry.1221552742">Mensagem</label>
                         <textarea name="entry.1221552742" id="msg" cols="30" rows="10" required></textarea>
                         <div class="btn">
-                            <p>:)</p>
+                            <p id="para">
+                                <img src="/img/bx-mail-send.svg" alt="" id="btn-send">
+                                <img src="/img/emoji-heart-eyes.svg" alt="" id="btn-send-smile">
+                            </p>
                             <button type="submit" id="send" onclick="validation()"> Enviar </button>
                         </div>
                     <p id="loading">Enviando...</p>

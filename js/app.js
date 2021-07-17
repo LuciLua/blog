@@ -23,6 +23,9 @@ function validation(){
     
     document.getElementById('send').style.pointerEvents='none'
     document.getElementById('send').style.backgroundColor='rgb(228, 228, 228)'
+
+    document.getElementById('btn-send').style.left='70px'
+    document.getElementById('btn-send').style.animation='1s'
     
     setTimeout(
         function(){  
@@ -42,6 +45,10 @@ function validation(){
                     msg.style.backgroundColor='#fff'
                     document.getElementById('send').style.pointerEvents='all'
                     document.getElementById('send').style.backgroundColor='#fff'
+
+                    
+                    document.getElementById('btn-send').style.left='14px'
+                    document.getElementById('btn-send').style.animation='1s'
                 }, 3000)
             }
             else if (email.value.indexOf('@') != -1){
@@ -50,6 +57,9 @@ function validation(){
                     notice.style.display='none'
                     document.getElementById('send').style.backgroundColor= 'rgb(220, 255, 218)'
                     document.getElementById('send').textContent = 'Enviado!'
+
+                    document.getElementById('btn-send-smile').style.left='19px'
+                    document.getElementById('btn-send-smile').style.animation='1s'
                 }, 3000)
             } 
         }, 1000

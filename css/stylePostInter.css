@@ -262,9 +262,32 @@
     position: relative;
 
     display: flex;
+    justify-content: center;
+    align-items: center;
 
     overflow: hidden;
     
+}
+
+.escreva form .btn #btn-send{
+    filter: invert(1);
+    position: absolute;
+
+    left: 15px;
+
+    transition: 1s;
+}
+
+.escreva form .btn #btn-send-smile{
+    filter: invert(1);
+    position: absolute;
+
+    left: -35px;
+
+    width: 21px;
+    height: 21px;
+
+    transition: 1s;
 }
 
 .escreva form input{

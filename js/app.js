@@ -96,23 +96,36 @@ function search(){
 
     var inputSearch = document.getElementById('input-search').value; // select: input de pesquisa
 
-    if(inputSearch == 'all'){ // search: command: all: mostra todos os posts
-        for ( let i = 0; i < posts.length; i++){ // passa por cada post e imprime cada post
+    for (let i = 0; i < posts.length; i++){ // passa por cada post
+
+        var especific = posts[i].textContent // especific: conteudo  textual de cada post que ele passa
+        
+        if(inputSearch == 'all'){ // search: command: all: mostra todos os posts
             result.innerHTML += ("<a class='item' href='" + posts[i] + "'>"+ posts[i].textContent +"</a>")
         }
-    }
 
-    for (let i = 0; i < posts.length; i++){ // passa por cada post
-        var especific = posts[i].textContent // especific: conteudo de cada post que ele passa
-
-        if(especific.indexOf(inputSearch) != -1){ // busca especifica
-            for (let i = 0; i < posts.length; i++){
-
-                if (posts[i].textContent.indexOf(especific) != -1){
-                    result.innerHTML += ("<a class='item' href='" + posts[i] + "'>"+ posts[i].textContent +"</a>")
-                }
-            }
+        else if(especific.indexOf(inputSearch) != -1){ // verifica se o que foi digitado existe no conteudo textual do post
+            result.innerHTML += ("<a class='item' href='" + posts[i] + "'>"+ posts[i].textContent +"</a>")
         }
+    } 
+
+    switch(inputSearch){
+        case '':
+            result.innerHTML = ("<p class='notFound'>Not found. Sorry :(</p>")
+            break
+        case 'nada':
+            result.innerHTML = ("<p class='notFound'>Not found. Sorry :(: nada </p>")
+            break
+        case especific.indexOf(inputSearch) == -1:
+            result.innerHTML = ("<p class='notFound'>Not found. Sorry :(: NOOT </p>")
+            break
     }
 }
+
+function autocomplete(){
+    document.getElementById('input-search').value = 'all'; // select: input de pesquisa
+    document.getElementById('go').click()      
+}
+
+
 

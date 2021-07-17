@@ -94,11 +94,11 @@ function search(){
         posts.push(post[i]) // puxa para lista posts todos os post
     } 
 
-    var inputSearch = document.getElementById('input-search').value; // select: input de pesquisa
+    var inputSearch = document.getElementById('input-search').value.toLowerCase(); // select: input de pesquisa
 
     for (let i = 0; i < posts.length; i++){ // passa por cada post
 
-        var especific = posts[i].textContent // especific: conteudo  textual de cada post que ele passa
+        var especific = posts[i].textContent.toLowerCase() // especific: conteudo  textual de cada post que ele passa
         
         if(inputSearch == 'all'){ // search: command: all: mostra todos os posts
             result.innerHTML += ("<a class='item' href='" + posts[i] + "'>"+ posts[i].textContent +"</a>")
@@ -113,10 +113,7 @@ function search(){
         case '':
             result.innerHTML = ("<p class='notFound'>Not found. Sorry :(</p>")
             break
-        case 'nada':
-            result.innerHTML = ("<p class='notFound'>Not found. Sorry :(: nada </p>")
-            break
-        case especific.indexOf(inputSearch) == -1:
+        case especific.indexOf(inputSearch) != -1:
             result.innerHTML = ("<p class='notFound'>Not found. Sorry :(: NOOT </p>")
             break
     }
@@ -127,7 +124,9 @@ function autocomplete(){
     document.getElementById('go').click()      
 }
 
-function classification(){
+//color classification
+
+function classification(){ 
     var antigos = document.getElementById('antigos')
     var recentes = document.getElementById('recentes')
     
@@ -135,10 +134,19 @@ function classification(){
     var recentesL = document.getElementById('recentesL')
 
     if (antigos.checked == true){
-        antigosL.style.backgroundColor='#000'
+        antigosL.style.backgroundColor='#a2a2a2'
+        antigosL.style.color='#fff'
     }  else {
-        antigosL.style.backgroundColor='#ff'
+        antigosL.style.backgroundColor='rgb(245, 245, 245)'
+        antigosL.style.color='#313131'
+    }
 
+    if (recentes.checked == true){
+        recentesL.style.backgroundColor='#a2a2a2'
+        recentesL.style.color='#fff'
+    }  else {
+        recentesL.style.backgroundColor='rgb(245, 245, 245)'
+        recentesL.style.color='#313131'
     }
 
 }

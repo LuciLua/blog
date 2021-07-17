@@ -447,6 +447,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    user-select: none;
 }
 
 .box-posts .search label:hover{
@@ -454,6 +456,7 @@
     background-color: rgb(238, 238, 238);
 }
     
+
 .box-posts .search input[type=checkbox]{
     display: none;
 }
@@ -470,6 +473,8 @@
 
     margin: 5px;
     cursor: pointer;
+
+    user-select: none;
 }
 .box-posts .search button img{
     filter: invert(1);

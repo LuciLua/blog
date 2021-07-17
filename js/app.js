@@ -143,6 +143,7 @@ function classification(){
     if (recentes.checked == true){
         recentesL.style.backgroundColor='rgb(244, 244, 244)'
         recentesL.style.color='#131313'
+
     }  else {
         recentesL.style.backgroundColor='rgb(248, 248, 248)'
         recentesL.style.color='#bbbbbb'

@@ -33,12 +33,12 @@
         </div>
         <div class="search-page">
             <div class="search">
-                <button type="submit" onclick="autocomplete()"><img src="/img/bx-show.svg" alt="show all" title="show all"></button>
                 <input type="search" name="" id="input-search" placeholder="search | all for all" >
                 <label for="antigos" id="antigosL">Antigos</label>
-                <input type="checkbox" name="antigos" id="antigos" onclick="classification()">
+                <input type="radio" name="antigos" id="antigos" onclick="classification()">
                 <label for="recentes" id="recentesL">Recentes</label>
-                <input type="checkbox" name="recentes" id="recentes" onclick="classification()">
+                <input type="radio" name="recentes" id="recentes" onclick="classification()">
+                <button type="submit" onclick="autocomplete()"><img src="/img/bx-show.svg" alt="show all" title="show all"></button>
                 <button id="go" type="submit" onclick="search()"><img src="/img/bx-search-alt.svg" alt="Search now" title="Search now"></button>
             </div>
             <div class="result-search" id="result-search">

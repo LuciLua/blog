@@ -127,5 +127,21 @@ function autocomplete(){
     document.getElementById('go').click()      
 }
 
+function classification(){
+    var antigos = document.getElementById('antigos')
+    var recentes = document.getElementById('recentes')
+    
+    var antigosL = document.getElementById('antigosL')
+    var recentesL = document.getElementById('recentesL')
+
+    if (antigos.checked == true){
+        antigosL.style.backgroundColor='#000'
+    }  else {
+        antigosL.style.backgroundColor='#ff'
+
+    }
+
+}
+
 
 

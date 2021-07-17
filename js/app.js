@@ -133,19 +133,19 @@ function classification(){
     var recentesL = document.getElementById('recentesL')
 
     if (antigos.checked == true){
-        antigosL.style.backgroundColor='#a2a2a2'
-        antigosL.style.color='#fff'
+        antigosL.style.backgroundColor='rgb(244, 244, 244)'
+        antigosL.style.color='#131313'
     }  else {
-        antigosL.style.backgroundColor='rgb(245, 245, 245)'
-        antigosL.style.color='#313131'
+        antigosL.style.backgroundColor='rgb(248, 248, 248)'
+        antigosL.style.color='#bbbbbb'
     }
 
     if (recentes.checked == true){
-        recentesL.style.backgroundColor='#a2a2a2'
-        recentesL.style.color='#fff'
+        recentesL.style.backgroundColor='rgb(244, 244, 244)'
+        recentesL.style.color='#131313'
     }  else {
-        recentesL.style.backgroundColor='rgb(245, 245, 245)'
-        recentesL.style.color='#313131'
+        recentesL.style.backgroundColor='rgb(248, 248, 248)'
+        recentesL.style.color='#bbbbbb'
     }
 
 }

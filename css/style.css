@@ -76,6 +76,7 @@ header .logo{
 
 header .logo h1{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-display: swap;
     color: rgb(31, 31, 31);
 }
 
@@ -102,6 +103,7 @@ header ul li a{
 
     color: rgb(19, 19, 19);
     font-family: ralewayMedium;
+    font-display: swap;
     font-size: 1rem;
 
     padding: 1vh 3vh 1vh 3vh;
@@ -157,6 +159,7 @@ header ul li a:hover{
 .container .init h1{
     color: rgb(255, 255, 255);
     font-family: ralewayExtraBold;
+    font-display: swap;
     font-size: 60px;
 
     line-height: 1.2;
@@ -177,6 +180,7 @@ header ul li a:hover{
     padding: 5px 20px 5px 20px;
     
     font-family: ralewaySemiBold;
+    font-display: swap;
 
     backdrop-filter: blur(3px);
     
@@ -277,6 +281,8 @@ header ul li a:hover{
 
 .container .box-posts .posts .post .title-content-media .title-post-subtitle-post h1{
     font-family: ralewayExtraBold;
+    font-display: swap;
+
     color: rgb(33, 33, 33);
 }
 .container .box-posts .posts .post .title-content-media .title-post-subtitle-post h2{
@@ -285,6 +291,7 @@ header ul li a:hover{
     font-weight: 300;
 
     font-family: ralewaySemiBold;
+    font-display: swap;
 }
 
 .container .box-posts .posts .post .title-content-media .content-media{
@@ -323,6 +330,7 @@ header ul li a:hover{
 
 .container .box-posts .posts .post .title-content-media .content-media .content p{
     font-family: ralewaySemiBold;
+    font-display: swap;
     font-size: 14px;
 
     text-indent: 4em;
@@ -357,6 +365,7 @@ header ul li a:hover{
     color: rgb(28, 28, 28);
 
     font-family: Arial;
+    font-display: swap;
 
     text-decoration: none;
 
@@ -415,6 +424,7 @@ header ul li a:hover{
     margin: 20px;
 
     font-family: ralewaySemiBold;
+    font-display: swap;
     font-size: 14px;
 }
 
@@ -436,6 +446,7 @@ footer h1{
     color: rgb(155, 155, 155);
 
     font-family: Arial;
+    font-display: swap;
 }
 
 
@@ -455,6 +466,7 @@ footer h1{
         padding: 10px 20px 10px 20px;
         text-decoration: none;
         font-family: 'Lexend' sans-serif;
+        font-display: swap;
 
         display: block;
 

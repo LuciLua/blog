@@ -37,6 +37,7 @@
 
     line-height: 2.2;
     font-family: ralewaySemiBold;
+    font-display: swap;
 
     font-size: 14px;
 
@@ -57,6 +58,7 @@
 
 .post-intern .title-post-subtitle-post-intern h1{
     font-family: ralewayExtraBold;
+    font-display: swap;
 
     color: rgb(33, 33, 33);
     font-size: 28px;
@@ -121,6 +123,7 @@
     margin: 2px;
 
     font-family: ralewaySemiBold;
+    font-display: swap;
     font-size: 14px;
 
     text-indent: 0;
@@ -129,6 +132,8 @@
 .box-posts h1{
     color: #595959;
     font-family: ralewaySemiBold;
+    font-display: swap;
+
     margin: 20px 0 20px 0
 }
 
@@ -194,6 +199,7 @@
     text-decoration: none;
 
     font-family: ralewaySemiBold;
+    font-display: swap;
 
     display: flex;
     align-items: center;
@@ -298,6 +304,7 @@
 
     color: #595959;
     font-family: ralewaySemiBold;
+    font-display: swap;
 
     cursor: pointer;
 }
@@ -324,6 +331,8 @@
 
     color: #595959;
     font-family: ralewayMedium;
+    font-display: swap;
+
 }
 
 .escreva iframe{
@@ -438,6 +447,7 @@
     color: #313131;
 
     font-family: ralewaySemiBold;
+    font-display: swap;
     font-size: 14px;
 
     padding: 3px 15px 3px 15px;
@@ -520,6 +530,7 @@
     color: #595959;
     font-family: ralewaySemiBold;
     font-size: 14px;
+    font-display: swap;
 
     margin: 15px;
 

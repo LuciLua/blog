@@ -526,6 +526,28 @@
     padding: 10px;
 }
 
+.box-posts .result-search .list-search .failSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 5vh;
+
+    animation: fadeIn 0.4s ease-in;
+}
+.box-posts .result-search .list-search .failSearch p{
+    font-family: ralewayExtraBold;
+    color: #464646;
+}
+.box-posts .result-search .list-search .failSearch img{
+    width: 30px;
+    height: 30px;
+
+    margin-left: 10px;
+    filter: contrast(0.5);
+}
+
 .box-posts .result-search .list-search .item{
     color: #595959;
     font-family: ralewaySemiBold;

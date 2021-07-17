@@ -114,7 +114,7 @@ function search(){
     }
 
     if (nomePosts.join('').indexOf(inputSearch) == -1 && inputSearch != 'all' || inputSearch == '') { // se estiver vazio ou se for diferente de 'all' e também não estiver contido no 'ex-array' unido pelo join() nomePosts
-        result.innerHTML = 'Sorry, not found :('
+        result.innerHTML = '<div class="failSearch"><p>Sorry, not found </p> <img src="/img/sad.svg" /></div>'
     }
 }
 

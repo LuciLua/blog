@@ -800,12 +800,15 @@ form .div-nome-email input:valid + .label-name::after{
 
 
 @media only screen and (max-width: 600px) {
+    .search-page{
+        padding: 20px;
+    }
     .search-page .result-search{
         padding: 0;
     }
 
 .search-page .search{
-    margin: 10px 50px 10px 50px;
+    margin: 10px 20px 10px 20px;
 }
 
     .search-page .result-search .list-search{

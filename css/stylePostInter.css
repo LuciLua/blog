@@ -562,23 +562,28 @@ form .div-nome-email input:valid + .label-name::after{
     width: 100%;
     height: 100%;
 
-    padding: 10px 20px 10px 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 50px;
 
     position: relative;
 }
 
 .search-page .search{
-    max-width: 1330px;
+    max-width: 700px;
     width: 100%;
     height: 35px;
 
-    margin-bottom: 30px;
+    margin: 10px 0 10px 0;
 
     position: relative;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    background-color: rgb(216, 216, 216);
  }
 
  .search-page .search input{
@@ -614,6 +619,7 @@ form .div-nome-email input:valid + .label-name::after{
 .search-page .search label{
     width: 15%;
     max-width: 100px;
+    min-width: 50px;
     height: 100%;
 
     border-radius: 5px;
@@ -622,11 +628,11 @@ form .div-nome-email input:valid + .label-name::after{
 
     font-family: ralewayMedium;
     font-display: swap;
-    font-size: 14px;
+    font-size: clamp(11px,2vw, 14px);
 
     padding: 3px 15px 3px 15px;
     
-    margin: 5px;
+    margin: 3px;
 
     display: flex;
     justify-content: center;
@@ -649,6 +655,7 @@ form .div-nome-email input:valid + .label-name::after{
 
 .search-page .search button{
     width: 10%;
+    min-width: 35px;
     max-width: 50px;
     height: 100%;
 
@@ -658,7 +665,7 @@ form .div-nome-email input:valid + .label-name::after{
     background-color: #29a9ff;
     color: #fff;
 
-    margin: 5px;
+    margin: 0 5px 0 5px;
     cursor: pointer;
 
     user-select: none;
@@ -682,19 +689,16 @@ form .div-nome-email input:valid + .label-name::after{
 }
 
 .search-page .result-search{
-    width: 100%;
-    max-width: 1330px;
 
+    max-width: 700px;
+    width: 100%;
     min-height: 1vh;
     height: fit-content;
 
     position: relative;
 
-    margin: 0 0 30px 0;
-
     display: flex;
     justify-content: center;
-
 }
 
 .search-page .result-search .list-search{
@@ -707,8 +711,6 @@ form .div-nome-email input:valid + .label-name::after{
 
     width: 100%;
     height: 100%;
-
-    padding: 10px;
 }
 
 .search-page .result-search .list-search .failSearch {
@@ -739,16 +741,18 @@ form .div-nome-email input:valid + .label-name::after{
     font-size: 14px;
     font-display: swap;
 
-    margin: 15px;
+    margin: 5px 0 5px 0;
 
     width: fit-content;
     height: 30px;
 
-    padding: 10px 20px 10px 40px;
+    padding: 10px 20px 10px 20px;
 
     background-color: #ebebeb;
 
     text-decoration: none;
+
+    border-radius: 6px;
 
     position: relative;
 
@@ -773,22 +777,34 @@ form .div-nome-email input:valid + .label-name::after{
     }
 }
 
+.search-page .result-search .list-search .item::after{
+    width: 30px;
+    height: 30px;
 
-.search-page .result-search .list-search .item:hover::before{
-    transform: rotate(90deg);
-    transition: 0.5s;
+    background-color: #EBEBEB;
+    content: '';
+
+    position: absolute;
+    right: -32px;
+
+    border-radius: 6px;
+    background-image: url('/img/bx-link.svg');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.search-page .result-search .list-search .item::before{
 
-    content: '';
-    width: 15px;
-    height: 15px;
+@media only screen and (max-width: 600px) {
+    .search-page .result-search{
+        padding: 0;
+    }
 
-    display: flex;
-    position: absolute;
+.search-page .search{
+    margin: 10px 50px 10px 50px;
+}
 
-    left: 10px;
+    .search-page .result-search .list-search{
+        padding: 0;
+    }
 
-    background-color: #595959;
 }

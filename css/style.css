@@ -59,6 +59,8 @@ header{
 
     position: relative;
     z-index: 100;
+
+    padding: 0 50px 0 50px;
 }
 
 header .logo{
@@ -93,7 +95,7 @@ header ul{
 }
 
 header ul li{
-    margin-right: 1vh;
+    margin-right: clamp(2px, 1vh, 1vh);
 }
 
 
@@ -106,7 +108,8 @@ header ul li a{
     font-display: swap;
     font-size: 1rem;
 
-    padding: 1vh 3vh 1vh 3vh;
+    padding: 1vw 3vw 1vw 3vw;
+
 
     text-decoration: none;
 }

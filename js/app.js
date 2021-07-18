@@ -13,16 +13,19 @@ function validation(){
     var msg = document.getElementById('msg')
 
     email.style.pointerEvents='none'
-    email.style.backgroundColor='rgb(228, 228, 228)'
-
+    email.style.backgroundColor='rgb(245, 245, 245)'
+    email.style.transition='1s'
+    
     nome.style.pointerEvents='none'
-    nome.style.backgroundColor='rgb(228, 228, 228)'
-
+    nome.style.backgroundColor='rgb(245, 245, 245)'
+    nome.style.transition='1s'
+    
     msg.style.pointerEvents='none'
-    msg.style.backgroundColor='rgb(228, 228, 228)'
+    msg.style.backgroundColor='rgb(245, 245, 245)'
+    msg.style.transition='1s'
     
     document.getElementById('send').style.pointerEvents='none'
-    document.getElementById('send').style.backgroundColor='rgb(228, 228, 228)'
+    document.getElementById('send').style.backgroundColor='rgb(245, 245, 245)'
 
     document.getElementById('btn-send').style.left='70px'
     document.getElementById('btn-send').style.animation='1s'
@@ -55,12 +58,12 @@ function validation(){
                 notice.style.display='block'
                 setTimeout(function(){ // se for valido
                     notice.style.display='none'
-                    document.getElementById('send').style.backgroundColor= 'rgb(220, 255, 218)'
+
                     document.getElementById('send').textContent = 'Enviado!'
 
                     document.getElementById('btn-send-smile').style.left='19px'
                     document.getElementById('btn-send-smile').style.animation='1s'
-                }, 3000)
+                }, 2000)
             } 
         }, 1000
         ) // enquanto processa 

@@ -45,12 +45,24 @@
                     </div>
 
                     <form action="https://docs.google.com/forms/d/e/1FAIpQLScPLY04KWdCdqSbWXbMRvczg5SY2bdpjrcmFQpS_WxF-bI09g/formResponse" target="prox" SameSite=None; Secure Set-Cookie: cname=cvalue> 
-                        <label for="entry.2063735066">Nome</label>
-                        <input class="btn" type="text" id="nome" name="entry.2063735066" placeholder="Seu nome" required>
-                        <label for="entry.393161566">Email</label>
-                        <input class="btn" type="text" id="email" name="entry.393161566" placeholder="Seu email" required>
-                        <label for="entry.1221552742">Mensagem</label>
-                        <textarea name="entry.1221552742" id="msg" cols="30" rows="10" required></textarea>
+                        <div class="div-nome-email">
+                            <input  autocomplete=none type="text" id="nome" name="entry.2063735066"  required>
+                            <label class="label-name" for="entry.2063735066">
+                                <span class="content-name">Nome</span>
+                            </label>
+                        </div>
+                        <div class="div-nome-email">
+                            <input type="text" id="email" name="entry.393161566" required>
+                            <label class="label-name" for="entry.393161566">
+                                <span class="content-name">Email</span>
+                            </label>
+                        </div>
+                        <div class="msg-div">
+                            <textarea name="entry.1221552742" id="msg" cols="30" rows="10" required></textarea>
+                            <label for="entry.1221552742" class="msg-label">
+                                <span class="msg-msg">Sua mensagem para mim :) </span>
+                            </label>
+                        </div>
                         <div class="btn">
                             <p id="para">
                                 <img src="/img/bx-mail-send.svg" alt="" id="btn-send">

@@ -583,7 +583,6 @@ form .div-nome-email input:valid + .label-name::after{
     align-items: center;
     justify-content: center;
 
-    background-color: rgb(216, 216, 216);
  }
 
  .search-page .search input{
@@ -690,7 +689,7 @@ form .div-nome-email input:valid + .label-name::after{
 
 .search-page .result-search{
 
-    max-width: 700px;
+    max-width: 680px;
     width: 100%;
     min-height: 1vh;
     height: fit-content;
@@ -791,6 +790,12 @@ form .div-nome-email input:valid + .label-name::after{
     background-image: url('/img/bx-link.svg');
     background-repeat: no-repeat;
     background-position: center;
+
+    filter: sepia(0.7) hue-rotate(180deg) contrast(0.8) saturate(6) opacity(70%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 

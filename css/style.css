@@ -95,7 +95,10 @@ header ul{
 }
 
 header ul li{
-    margin-right: clamp(2px, 1vh, 1vh);
+    margin-left: 20px;
+}
+header ul li:nth-child(4){
+    margin-right: 50px;
 }
 
 
@@ -108,7 +111,7 @@ header ul li a{
     font-display: swap;
     font-size: 1rem;
 
-    padding: 1vw 3vw 1vw 3vw;
+    padding: 0.7vw 2.2vw 0.7vw 2.2vw;
 
 
     text-decoration: none;

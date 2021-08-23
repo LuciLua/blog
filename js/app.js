@@ -73,11 +73,11 @@ function validation(){
 
 // scroll
 
-window.addEventListener('scroll', function(){
-    var h1Init = document.getElementById('bloblgo')
-    let value = this.window.scrollY;
-    h1Init.style.marginBottom = value * 0.25 + 'px';
-})
+// window.addEventListener('scroll', function(){
+//     var h1Init = document.getElementById('bloblgo')
+//     let value = this.window.scrollY;
+//     h1Init.style.marginBottom = value * 0.25 + 'px';
+// })
 
 // onlinput
 

@@ -530,8 +530,14 @@ footer h1{
         padding: 0;
     }
 
+    header ul li:nth-child(4){
+        margin-right: 0px;
+    }
+    
+
     .header-flex ul li{
-        margin: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px;
         position: relative;
     }
 
@@ -539,7 +545,7 @@ footer h1{
         width: 100%;
         height: 100%;
 
-        margin: 0px;
+        margin: 0;
         padding: 0;
 
         color: rgb(0, 0, 0);

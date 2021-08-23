@@ -43,6 +43,9 @@ body{
 
     overflow-x: hidden;
     margin-bottom: 100px; /*footer*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .menu{
@@ -51,11 +54,18 @@ body{
 
 header{
     height: 10vh;
+    /* min-width: 95%; */
     width: 100%;
+    max-width: calc(1300px + 150px);
 
-    background-color: #fff;
+    /* background-color: rgb(255, 75, 75); */
+
+    /* margin-left: 50px; */
+    /* margin-right: 50px; */
+
     display: flex;
     align-items: center;
+    justify-content: center;
 
     position: relative;
     z-index: 100;
@@ -154,6 +164,7 @@ header ul li a:hover{
     overflow: hidden;
 }
 
+
 /* .container .init img{
     z-index: -1;
     position: absolute;
@@ -163,7 +174,7 @@ header ul li a:hover{
 } */
 
 .container .init h1{
-    color: rgb(255, 255, 255);
+    color: #fff;
     font-family: ralewayExtraBold;
     font-display: swap;
     font-size: 60px;
@@ -173,8 +184,8 @@ header ul li a:hover{
 
     position: relative;
 
-    text-shadow: #000 0 0 1px;
-}
+    text-shadow: rgba(0, 0, 0, 0.104) 0 0 10px,
+    rgba(0, 0, 0, 0.304) 1px 1px 3px}
 
 .container .init h2{
     color: rgb(255, 255, 255);
@@ -235,7 +246,7 @@ header ul li a:hover{
     border-radius: 5px;
 
     width: 100%;
-    max-width: 1400px;
+    max-width: 1290px;
     
     height: 60vh;
 

@@ -169,6 +169,7 @@ function classification(){
 
 const converteJSON = json => json = json.json()
 const selecionaPosts = p => p.posts
+const selecionaTitulo = p => p.title
 const transformaJSONemString = string => JSON.stringify(string)
 
 const limite = limitar => limitar.substring(0, 395)
@@ -183,20 +184,26 @@ conteudo.forEach( (content, index) => {
     fetch('../posts.json')
     .then(converteJSON)
     .then(selecionaPosts)
-    .then(content => content[index].content)
     .then(transformaJSONemString())
 
-    .then(limite)
-    .then(insere => content.innerHTML = insere)
+    .then(content => {
+        for(let i = 0; i < content.length; i++){
+            document.querySelectorAll('[title]').forEach(titulo =>  titulo.innerHTML = content[i].title)
+            document.querySelectorAll('[subtitle]').forEach(subtitulo =>  subtitulo.innerHTML = content[i].subtitle)
+        }
+        return content
+    })
+
+    .then(content => content[index].content) // apenas conteudo
+    .then(limite) // limita
+    .then(insere => content.innerHTML = insere) // insere
+    
 })
 
 
-conteudoIntern.forEach(async function(content){
+conteudoIntern.forEach(content => 
         {
-            var id = 0
-            await function(){
-                id = content.getAttribute('conteudoIntern')
-            }
+            var id = content.getAttribute('id')
             console.log(id)
 
             fetch('/../posts.json')
@@ -210,5 +217,4 @@ conteudoIntern.forEach(async function(content){
                 content.innerHTML = insere
             })
         }
-    }
 ) 

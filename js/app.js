@@ -167,22 +167,48 @@ function classification(){
 
 // ajax posts preview
 
-document.querySelectorAll('[posts]').forEach(link => {
-    
-    const posts = document.querySelectorAll('[posts]')
-    const conteudo = document.querySelectorAll('[conteudo]')
+const converteJSON = json => json = json.json()
+const selecionaPosts = p => p.posts
+const transformaJSONemString = string => JSON.stringify(string)
 
-    conteudo.forEach( content => {
-        fetch('../posts.json')
-        .then(trat => trat.json())
-        .then(b => b.posts)
-        .then(a => {
-            for(let i = 0; i< a.length; i++){
-                return a[i].content
-            }            
-        })
-        .then(insere => {
-            content.innerHTML = JSON.stringify(insere)
-        })
-    })
+const limite = limitar => limitar.substring(0, 395)
+    
+const posts = document.querySelectorAll('[posts]')
+const conteudo = document.querySelectorAll('[conteudo]')
+
+var id = 0
+const conteudoIntern = document.querySelectorAll('[conteudoIntern]')
+
+conteudo.forEach( (content, index) => {
+    fetch('../posts.json')
+    .then(converteJSON)
+    .then(selecionaPosts)
+    .then(content => content[index].content)
+    .then(transformaJSONemString())
+
+    .then(limite)
+    .then(insere => content.innerHTML = insere)
 })
+
+
+conteudoIntern.forEach(async function(content){
+        {
+            var id = 0
+            await function(){
+                id = content.getAttribute('conteudoIntern')
+            }
+            console.log(id)
+
+            fetch('/../posts.json')
+            
+            .then(converteJSON)
+            .then(selecionaPosts)
+            .then(content => content[id].content)
+            .then(transformaJSONemString())
+            
+            .then(insere => {
+                content.innerHTML = insere
+            })
+        }
+    }
+) 

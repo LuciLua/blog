@@ -170,26 +170,27 @@ function classification(){
 const converteJSON = json => json = json.json()
 const selecionaPosts = p => p.posts
 const selecionaTitulo = p => p.title
-const transformaJSONemString = string => JSON.stringify(string)
 
 const limite = limitar => limitar.substring(0, 395)
     
 const posts = document.querySelectorAll('[posts]')
 const conteudo = document.querySelectorAll('[conteudo]')
 
-var id = 0
 const conteudoIntern = document.querySelectorAll('[conteudoIntern]')
 
 conteudo.forEach( (content, index) => {
     fetch('../posts.json')
     .then(converteJSON)
     .then(selecionaPosts)
-    .then(transformaJSONemString())
 
-    .then(content => {
-        for(let i = 0; i < content.length; i++){
-            document.querySelectorAll('[title]').forEach(titulo =>  titulo.innerHTML = content[i].title)
-            document.querySelectorAll('[subtitle]').forEach(subtitulo =>  subtitulo.innerHTML = content[i].subtitle)
+    .then(content => { // titulo e subtitulo
+
+        const title =  document.querySelectorAll(`[title]`)
+        const subtitle =  document.querySelectorAll(`[subtitle]`)
+
+        for (let i = 0; i < conteudo.length; i++){
+            subtitle[i].innerHTML = content[i].subtitle
+            title[i].innerHTML = content[i].title
         }
         return content
     })
@@ -210,11 +211,20 @@ conteudoIntern.forEach(content =>
             
             .then(converteJSON)
             .then(selecionaPosts)
-            .then(content => content[id].content)
-            .then(transformaJSONemString())
-            
-            .then(insere => {
-                content.innerHTML = insere
+
+            .then(content => {
+
+                const title =  document.querySelector(`[titleIntern]`)
+                const subtitle =  document.querySelector(`[subtitleIntern]`)
+
+                subtitle.innerHTML = content[id].subtitle
+                title.innerHTML = content[id].title
+
+                return content
             })
+
+            .then(porId => porId[id].content)
+            
+            .then(insere => content.innerHTML = insere)
         }
 ) 

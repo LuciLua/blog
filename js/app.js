@@ -165,4 +165,24 @@ function classification(){
 }
 
 
+// ajax posts preview
 
+document.querySelectorAll('[posts]').forEach(link => {
+    
+    const posts = document.querySelectorAll('[posts]')
+    const conteudo = document.querySelectorAll('[conteudo]')
+
+    conteudo.forEach( content => {
+        fetch('../posts.json')
+        .then(trat => trat.json())
+        .then(b => b.posts)
+        .then(a => {
+            for(let i = 0; i< a.length; i++){
+                return a[i].content
+            }            
+        })
+        .then(insere => {
+            content.innerHTML = JSON.stringify(insere)
+        })
+    })
+})

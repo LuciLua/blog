@@ -93,6 +93,48 @@ function color(){
     h1Init.style.color = colorInput.value
 }
 
+// nomes dos posts
+
+function gerarNomes(){
+    const posts = document.querySelector('.list-posts > ul')
+
+    const listaNomePosts = []
+
+    fetch('/../posts.json')     
+        .then(res => res = res.json())
+        .then(res => res.posts)
+        .then(res => {
+            listaNomePosts.push(res.map(res => res.title))
+            const novo = listaNomePosts.concat(listaNomePosts[0])
+            novo.shift()           
+
+            console.log(novo)
+
+            const novores = [].concat(res)
+            console.log(novores)
+
+            return novores
+        })
+        .then(res => {
+            listaNomePosts.forEach(pst => {
+                var newLi = document.createElement('li')
+                var newA = document.createElement('a')
+
+                var newContent = document.createTextNode(pst[0])
+
+                newLi.appendChild(newA)
+                newA.appendChild(newContent)
+                
+                newA.href = `/pages/posts/0${res.posts.id}.html`
+
+                console.log(newLi)
+            })
+        })
+        .catch(erro => console.log('deu erro: ' + erro))
+}
+
+gerarNomes()
+
 //search
 
 function search(){
@@ -164,67 +206,67 @@ function classification(){
 
 }
 
-
 // ajax posts preview
 
-const converteJSON = json => json = json.json()
-const selecionaPosts = p => p.posts
-const selecionaTitulo = p => p.title
+function postSystem(){
 
-const limite = limitar => limitar.substring(0, 395)
-    
-const posts = document.querySelectorAll('[posts]')
-const conteudo = document.querySelectorAll('[conteudo]')
+    const converteJSON = json => json = json.json()
+    const selecionaPosts = p => p.posts
+    const limite = limitar => limitar.substring(0, 395)
 
-const conteudoIntern = document.querySelectorAll('[conteudoIntern]')
+    const conteudo = document.querySelectorAll('[conteudo]')
 
-conteudo.forEach( (content, index) => {
-    fetch('../posts.json')
-    .then(converteJSON)
-    .then(selecionaPosts)
+    const conteudoIntern = document.querySelectorAll('[conteudoIntern]')
 
-    .then(content => { // titulo e subtitulo
+    conteudo.forEach( (content, index) => {
+        fetch('../posts.json')
+        .then(converteJSON)
+        .then(selecionaPosts)
 
-        const title =  document.querySelectorAll(`[title]`)
-        const subtitle =  document.querySelectorAll(`[subtitle]`)
+        .then(content => { // titulo e subtitulo
 
-        for (let i = 0; i < conteudo.length; i++){
-            subtitle[i].innerHTML = content[i].subtitle
-            title[i].innerHTML = content[i].title
-        }
-        return content
+            const title =  document.querySelectorAll(`[title]`)
+            const subtitle =  document.querySelectorAll(`[subtitle]`)
+
+            for (let i = 0; i < conteudo.length; i++){
+                subtitle[i].innerHTML = content[i].subtitle
+                title[i].innerHTML = content[i].title
+            }
+            return content
+        })
+
+        .then(content => content[index].content) // apenas conteudo
+        .then(limite) // limita
+        .then(insere => content.innerHTML = insere) // insere
+        
     })
 
-    .then(content => content[index].content) // apenas conteudo
-    .then(limite) // limita
-    .then(insere => content.innerHTML = insere) // insere
-    
-})
 
+    conteudoIntern.forEach(content => 
+            {
+                var id = content.getAttribute('id')
+                console.log(id)
 
-conteudoIntern.forEach(content => 
-        {
-            var id = content.getAttribute('id')
-            console.log(id)
+                fetch('/../posts.json')
+                
+                .then(converteJSON)
+                .then(selecionaPosts)
 
-            fetch('/../posts.json')
-            
-            .then(converteJSON)
-            .then(selecionaPosts)
+                .then(content => {
 
-            .then(content => {
+                    const title =  document.querySelector(`[titleIntern]`)
+                    const subtitle =  document.querySelector(`[subtitleIntern]`)
 
-                const title =  document.querySelector(`[titleIntern]`)
-                const subtitle =  document.querySelector(`[subtitleIntern]`)
+                    subtitle.innerHTML = content[id].subtitle
+                    title.innerHTML = content[id].title
 
-                subtitle.innerHTML = content[id].subtitle
-                title.innerHTML = content[id].title
+                    return content
+                })
 
-                return content
-            })
+                .then(porId => porId[id].content)
+                
+                .then(insere => content.innerHTML = insere)
+            }
+    ) 
 
-            .then(porId => porId[id].content)
-            
-            .then(insere => content.innerHTML = insere)
-        }
-) 
+}
